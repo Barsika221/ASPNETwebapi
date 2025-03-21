@@ -24,10 +24,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-/*
-Készítsd el az alábbi négy végpontot: egy elem megjelenítése, összes elem listázása, létrehozás, törlés. Módosítás (PATCH vagy PUT) pluszpont. 
-*/
-
 app.MapGet("/macadress", async (MacAdressContext context) =>
 {
     return Results.Ok(await context.MacAdresses.ToListAsync());
